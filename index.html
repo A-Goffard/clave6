@@ -5,80 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pista 6</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <script>comprobar_trad()</script>
+    <script src="scriptvideo.js"></script>
+    <script src="script.js"></script>    
+
 </head>
 
 <body>
     <canvas></canvas>
     
-<main>
-    
-<div class="cont_texto">
-    <div>
-        <h2>TRADUCE ESTA FRASE</h2>
-    </div>
-    <div>
-        <P>H3DPRU8HP4Q</P>
-    </div>
-    <div class="comprueba">
-         
-        <form name="myForm" action="" onsubmit="return validateForm()" method="get">
-            <p class="resp_cast">Respuesta en castellano:</p><br> <input class="texto_comprobar" type="text" name="fname">
-            <input class="boton_comprobar" type="submit" value="Comprobar">
-          </form>  
-    </div>
-    
-</div>
-
-
-</main>
-
-
-<script>
-    //fondo matrix
-let canvas = document.querySelector("canvas");
-
-let ctx = canvas.getContext("2d"); 
-let width = canvas.width = window.innerWidth;
-let height = canvas.height = window.innerHeight;
-let str = ["B", " ", "I", " ", "L"," ",  "B"," ",  "O"," ",  "S", " ", "T"," ",  "A"," ",  "C", " ", "K"];
-let matrix = str.sort();
-let font = 5;
-let col = width / font;
-let arr = [];
-
-for(let i = 0; i < col; i++) {
-    arr[i] = 1;
-}
-
-const draw = () => {
-    ctx.fillStyle = "rgba(0,0,0,0.05)";
-    ctx.fillRect(0, 0, width, height);
-    ctx.fillStyle = "#FF7F00"; 
-    ctx.font = `$(font)px system-iu`;
-
-    for(let i = 0; i < arr.length; i++) {
-        let txt = matrix[Math.floor(Math.random() * matrix.length)];
-        ctx.fillText(txt, i * font, arr[i] * font);
-
-        if(arr[i] * font > height && Math.random() > 0.975) {
-            arr[i] = 0;      
-        }
-
-        arr[i]++;
-    }
-}
-
-setInterval(draw, 15);
-
-window.addEventListener("resize", () => location.reload());
-
-</script>
-
-
-
-
-
+    <main>
+        <div class="cont_texto">
+            <div>
+                <h2>TRADUCE ESTA FRASE</h2>
+            </div>
+            <div>
+                <p>H3DPRU8HP4Q</p>
+            </div>
+            <div class="comprueba">
+                <form name="myForm" onsubmit="return validateForm()">
+                    <p class="resp_cast">Respuesta en castellano:</p>
+                    <br>
+                    <input class="texto_comprobar" type="text" name="fname">
+                    <input class="boton_comprobar" type="submit" value="Comprobar">
+                </form>  
+            </div>
+        </div>
+    </main>
 </body>
 </html>
