@@ -1,0 +1,99 @@
+* {
+        margin: 0 auto;
+        padding: 0;
+        font-family:  system-ui, Arial, sans-serif;
+}
+
+
+main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        color: rgb(255, 255, 255);
+        /* background-image: url(img/computer.webp); */
+        
+        
+        
+}
+canvas{ 
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: -4;
+      }
+
+main h2 {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+        text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+}
+
+.cont_texto {
+        background-color: rgb(77, 76, 76);
+        padding: 1rem;
+        border-radius: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url(img/computer.webp);
+        background-repeat: no-repeat;
+        background-size:150%;
+        background-blend-mode:difference;
+}
+
+.resp_cast {
+        font-size: 1.3rem;
+        /* background-color: #FF7F00; */
+        border-radius: 0.5rem;
+        text-align: center;
+        /* color: #FF7F00; */
+        
+}
+
+.texto_comprobar {
+        display: flex;
+        width: 89%;
+        border-radius: 0.5rem;
+        height: 1.5rem;
+}
+
+.boton_comprobar {
+        display: flex;
+        flex-wrap: wrap;        
+        width: 50%;
+        margin-top: 1rem;
+        background-color: #FF7F00;
+        border-radius: 0.5rem;
+        text-align: center;
+        height: 2.5rem;
+        padding-left: 15px;
+        color: white;
+        font-size: 1rem;
+}
+
+main p {
+        font-size: 1.8rem;
+        padding-top: 1rem;
+        text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+}
+
+.comprueba {
+        padding-top: 2rem;
+        font-weight: 600;
+}
+
+input {
+        width: 100px;
+}
+
+/* Mediaquery */
+
+@media screen and (max-width: 650px) {
+
+        main h2 {
+                font-size: 1.5rem;
+        }
+
+}
