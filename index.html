@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pista 6</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scriptvideo.js"></script>
-    <script src="script.js"></script>    
+   
 
 </head>
 
@@ -25,11 +24,15 @@
                 <form name="myForm" onsubmit="return validateForm()">
                     <p class="resp_cast">Respuesta en castellano:</p>
                     <br>
-                    <input class="texto_comprobar" type="text" name="fname">
+                    <!-- Agrega la etiqueta y el atributo id al campo de entrada -->
+                    <label for="respuestaCastellano">Respuesta:</label>
+                    <input class="texto_comprobar" type="text" name="fname" id="respuestaCastellano" title="Ingresa la respuesta en castellano" placeholder="Escribe aquí...">
                     <input class="boton_comprobar" type="submit" value="Comprobar">
                 </form>  
             </div>
         </div>
     </main>
 </body>
+<script src="scriptvideo.js"></script>
+<script src="script.js"></script> 
 </html>
