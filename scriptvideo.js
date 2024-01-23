@@ -3,8 +3,8 @@ let canvas = document.querySelector("canvas");
 let ctx = canvas.getContext("2d");
 let width = canvas.width = window.innerWidth;
 let height = canvas.height = window.innerHeight;
-let str = "BILBOSTACK BILBOSTACK";
-let matrix = str.split("");
+let str = ["B", " ", "I", " ", "L"," ", "B"," ", "O"," ", "S"," ", "T"," ", "A"," ", "C", "", "K"];
+let matrix = str.sort();
 let font = 5;
 let col = width / font;
 let arr = [];
@@ -16,7 +16,7 @@ for (let i = 0; i < col; i++) {
 const draw = () => {
     ctx.fillStyle = "rgba(0,0,0,0.05)";
     ctx.fillRect(0, 0, width, height);
-    ctx.fillStyle = "#FF7F00";
+    ctx.fillStyle = "#FF8A00";
     ctx.font = "${font}px system-iu";
 
     for (let i = 0; i < arr.length; i++) {
